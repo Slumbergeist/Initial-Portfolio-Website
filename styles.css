@@ -1,0 +1,54 @@
+/*
+Font Instructions:
+    Cal Sans - Headings and Titles
+    Jersey 10 - Feature headings / Draw attention
+    Zain - General text
+    Share Tech Mono - Code
+ */
+
+html {
+    font-family: 'Zain', sans-serif;
+}
+
+body {
+    background-color: gray;
+    margin: 0;
+}
+
+.centered {
+    margin: 0 auto;
+    width: 1000px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Cal Sans', Impact, sans-serif;
+    font-size: 4rem;
+    margin: 0;
+}
+
+
+   /* Header & Nav */
+header {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-family: 'Jersey 10', serif;
+}
+
+nav ul {
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+}
+
+#landing {
+    background-image: url("img/Caleb.jpg")/*, linear-gradient()*/;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    padding: 5rem;
+}
