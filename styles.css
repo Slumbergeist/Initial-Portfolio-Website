@@ -11,14 +11,19 @@ html {
 }
 
 body {
-    background-color: gray;
+    background-color: #FAF3EE;
     margin: 0;
 }
 
 .centered {
     margin: 0 auto;
     width: 1000px;
-    text-align: center;
+}
+
+.background-feature {
+    font-family: 'Cal Sans', sans-serif;
+    font-size: 10rem;
+    z-index: -1;
 }
 
 h1 {
@@ -30,10 +35,15 @@ h1 {
 
    /* Header & Nav */
 header {
-    background-color: black;
-    color: white;
+    position: fixed;
+    background-color: #F0353500;
+    color: #FFFFFF60;
     padding: 10px;
     font-family: 'Jersey 10', serif;
+}
+
+header:hover {
+    color: #FFFFFFFF;
 }
 
 nav ul {
@@ -42,13 +52,46 @@ nav ul {
 
 nav li {
     display: inline;
+    margin: 0 30px;
 }
 
+   /* Landing */
 #landing {
-    background-image: url("img/Caleb.jpg")/*, linear-gradient()*/;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-image: linear-gradient(110deg, #000000FF 45%, #00000000 45%), url("img/Caleb.jpg");
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 300px;
-    padding: 5rem;
+    color: white;
+    height: 700px;
+    padding: 5% 5%;
+    border-bottom: 10px solid #F03535;
+}
+
+#landing-title {
+    width: 500px;
+    margin: 0;
+}
+
+#landing h2 {
+    font-family: "Jersey 10", sans-serif;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin: 0 1rem;
+}
+
+#tagline {
+    font-style: italic;
+    margin: 10px 1rem;
+}
+
+
+   /* About */
+#about .background-feature {
+    background: -webkit-linear-gradient(#F03535FF, #F0353500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-left: 10px;
 }
