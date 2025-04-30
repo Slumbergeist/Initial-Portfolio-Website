@@ -11,87 +11,66 @@ html {
 }
 
 body {
-    background-color: #FAF3EE;
     margin: 0;
-}
-
-.centered {
-    margin: 0 auto;
-    width: 1000px;
-}
-
-.background-feature {
-    font-family: 'Cal Sans', sans-serif;
-    font-size: 10rem;
-    z-index: -1;
 }
 
 h1 {
     font-family: 'Cal Sans', Impact, sans-serif;
-    font-size: 4rem;
+    font-size: 5rem;
     margin: 0;
 }
 
-
-   /* Header & Nav */
-header {
-    position: fixed;
-    background-color: #F0353500;
-    color: #FFFFFF60;
-    padding: 10px;
-    font-family: 'Jersey 10', serif;
-}
-
-header:hover {
-    color: #FFFFFFFF;
-}
-
-nav ul {
-    margin: 0;
-}
-
-nav li {
-    display: inline;
-    margin: 0 30px;
-}
-
-   /* Landing */
-#landing {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    background-image: linear-gradient(110deg, #000000FF 45%, #00000000 45%), url("img/Caleb.jpg");
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-    height: 700px;
-    padding: 5% 5%;
-    border-bottom: 10px solid #F03535;
-}
-
-#landing-title {
-    width: 500px;
-    margin: 0;
-}
-
-#landing h2 {
+h2 {
     font-family: "Jersey 10", sans-serif;
-    font-size: 2rem;
+    font-size: 3rem;
     letter-spacing: 2px;
     margin: 0 1rem;
+}
+
+p {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+
+#landing {
+    color: white;
+    height: 100vh;
+}
+
+#landing-bottom {
+    background-image: linear-gradient(110deg, #000000FF 55%, #00000055 55%), url("img/code.png");
+    background-repeat: no-repeat;
+    height: 100%;
+    z-index: -1;
+}
+
+#landing-top {
+    position: absolute;
+    background: url("img/Skull Pattern.png");
+    -webkit-mask-image: -webkit-linear-gradient(340deg, #000000FF 55%, #00000000 55%);
+    height: 100%;
+    width: 100%;
+}
+
+#landing-content {
+    display: flex;
+    padding-top: 35vh;
+    padding-left: 5%;
+}
+
+.image-container {
+    border-radius: 50%;
+    max-width: 200px;
+    max-height: 200px;
+    overflow: clip;
 }
 
 #tagline {
     font-style: italic;
     margin: 10px 1rem;
-}
-
-
-   /* About */
-#about .background-feature {
-    background: -webkit-linear-gradient(#F03535FF, #F0353500);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    padding-left: 10px;
 }
