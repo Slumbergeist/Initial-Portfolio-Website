@@ -55,12 +55,22 @@ img {
     -webkit-mask-image: -webkit-linear-gradient(340deg, #000000FF 55%, #00000000 55%);
     height: 100%;
     width: 100%;
+    z-index: 1;
 }
 
 #landing-content {
     display: flex;
     padding-top: 35vh;
     padding-left: 5%;
+}
+
+.landing-text {
+    margin-left: 20px;
+}
+
+#landing-content img {
+    position: relative;
+    bottom: 40px;
 }
 
 .image-container {
@@ -73,4 +83,46 @@ img {
 #tagline {
     font-style: italic;
     margin: 10px 1rem;
+}
+
+#bookmarks {
+    position: absolute;
+    top: 45%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 500px;
+    width: 100%;
+}
+
+.bookmark {
+    background: conic-gradient(
+        at 85%,
+        red 54deg,
+        transparent 54deg 125deg,
+        red 125deg
+    );
+    text-align: center;
+    width: 300px;
+}
+
+#game-dev-bookmark {
+    margin-left: -25px;
+}
+
+#art-bookmark {
+    margin-left: -60px;
+}
+
+#music-bookmark {
+    margin-left: -85px;
+}
+
+#contact-bookmark {
+    margin-left: -110px;
+}
+
+#about-me-bookmark {
+    margin-left: -140px;
 }
