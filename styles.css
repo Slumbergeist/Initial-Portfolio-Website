@@ -6,8 +6,6 @@ Font Instructions:
     Share Tech Mono - Code
  */
 
-                                     /* !!! FIX UN-CLICKABLE BOOKMARKS - READ CLIPPING/MASKING - TRY MAKING BRANCH OF REPOSITORY !!! */
-
 html {
     font-family: 'Zain', sans-serif;
 }
@@ -37,7 +35,6 @@ p {
 img {
     width: 100%;
 }
-
 
 #landing {
     color: white;
@@ -100,6 +97,7 @@ img {
 }
 
 .bookmark {
+    position: relative;
     background: conic-gradient(
         at 85%,
         var(--bookmark-bg-color) 54deg,
