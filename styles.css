@@ -42,12 +42,14 @@ img {
 }
 
 #landing-bottom {
+    background-color: black;
     background-image: url("img/code.png");
     background-size: cover;
     background-repeat: no-repeat;
     box-shadow: inset 0 0 0 1000px #00000088;
     height: 100%;
     z-index: -1;
+    transition: background-image 0.5s ease-in;
 }
 
 #landing-top {
@@ -61,6 +63,7 @@ img {
 
 #landing-content {
     display: flex;
+    flex-wrap: wrap;
     padding-top: 35vh;
     padding-left: 5%;
 }
@@ -84,6 +87,11 @@ img {
 #tagline {
     font-style: italic;
     margin: 10px 1rem;
+}
+
+#about-section {
+    margin-top: 50px;
+    max-width: 500px;
 }
 
 #bookmarks {
