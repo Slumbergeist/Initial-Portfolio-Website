@@ -43,6 +43,7 @@ img {
 
 #landing-bottom {
     background-image: url("img/code.png");
+    background-size: cover;
     background-repeat: no-repeat;
     box-shadow: inset 0 0 0 1000px #00000088;
     height: 100%;
@@ -169,4 +170,22 @@ img {
 
 #about-me-bookmark:hover {
     --bookmark-bg-color: #D16C13FF;
+}
+
+@keyframes extend {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 100px;
+    }
+}
+
+@keyframes retract {
+    0% {
+        left: 100px;
+    }
+    100% {
+        left: 0;
+    }
 }
