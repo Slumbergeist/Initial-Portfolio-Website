@@ -36,7 +36,7 @@ img {
     width: 100%;
 }
 
-#landing {
+#base {
     color: white;
     height: 100vh;
 }
@@ -45,6 +45,7 @@ img {
     background-color: black;
     background-image: url("img/code.png");
     background-size: cover;
+    background-position: right;
     background-repeat: no-repeat;
     box-shadow: inset 0 0 0 1000px #00000088;
     height: 100%;
@@ -89,9 +90,8 @@ img {
     margin: 10px 1rem;
 }
 
-#about-section {
-    margin-top: 50px;
-    max-width: 500px;
+.skill-page {
+    display: none;
 }
 
 #bookmarks {
@@ -119,6 +119,7 @@ img {
     font-size: 1.5rem;
     padding: 15px 0;
     text-shadow: 3px 3px black;
+    cursor: pointer;
 }
 
 .bookmark h3 {
