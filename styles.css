@@ -62,24 +62,26 @@ img {
     height: 100%;
 }
 
-#landing-content {
-    display: flex;
+.content-page {
+    display: none;
     flex-wrap: wrap;
-    padding-top: 35vh;
-    padding-left: 5%;
+    padding-top: 10%;
+    max-width: 60%;
 }
 
 .landing-text {
     margin-left: 20px;
 }
 
-#landing-content img {
+#landing-page img {
     position: relative;
     bottom: 40px;
 }
 
 .image-container {
     border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 1px 1px 20px white;
     max-width: 200px;
     max-height: 200px;
     overflow: clip;
@@ -88,10 +90,6 @@ img {
 #tagline {
     font-style: italic;
     margin: 10px 1rem;
-}
-
-.skill-page {
-    display: none;
 }
 
 #bookmarks {
@@ -172,12 +170,12 @@ img {
     --bookmark-bg-color: #7D28ABFF;
 }
 
-#about-me-bookmark {
+#landing-bookmark {
     --bookmark-bg-color: #D16C1388;
     margin-left: 0;
 }
 
-#about-me-bookmark:hover {
+#landing-bookmark:hover {
     --bookmark-bg-color: #D16C13FF;
 }
 
@@ -196,5 +194,15 @@ img {
     }
     100% {
         left: 0;
+    }
+}
+
+@keyframes pop-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        transform: translate(100px);
+        opacity: 100%;
     }
 }
