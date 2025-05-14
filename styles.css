@@ -6,6 +6,19 @@ Font Instructions:
     Share Tech Mono - Code
  */
 
+:root {
+    --primary-main-color: #F03535FF;
+    --primary-dark-color: #901515FF;
+    --secondary-main-color: #2D7DC7FF;
+    --secondary-dark-color: #1A5790FF;
+    --tertiary-main-color: #349F39FF;
+    --tertiary-dark-color: #18731CFF;
+    --quarternary-main-color: #D7AF1AFF;
+    --quarternary-dark-color: #AF8D0CFF;
+    --quinary-main-color: #7D28ABFF;
+    --quinary-dark-color: #63138EFF;
+}
+
 html {
     font-family: 'Zain', sans-serif;
 }
@@ -25,6 +38,12 @@ h2 {
     font-size: 3rem;
     letter-spacing: 2px;
     margin: 0 1rem;
+}
+
+h3 {
+    font-family: "Jersey 10", sans-serif;
+    letter-spacing: 2px;
+    font-size: 3rem;
 }
 
 p {
@@ -69,6 +88,32 @@ img {
     max-width: 60%;
 }
 
+.content-page .skill-title {
+    text-shadow: 7px 7px var(--title-shadow-color);
+    font-size: 5rem;
+    margin: 10px 0;
+}
+
+#web-dev-page .skill-title {
+    --title-shadow-color: var(--primary-dark-color);
+}
+
+#game-dev-page .skill-title {
+    --title-shadow-color: var(--secondary-dark-color);
+}
+
+#art-page .skill-title {
+    --title-shadow-color: var(--tertiary-dark-color);
+}
+
+#music-page .skill-title {
+    --title-shadow-color: var(--quarternary-dark-color);
+}
+
+#contact-page .skill-title {
+    --title-shadow-color: var(--quinary-dark-color);
+}
+
 .landing-text {
     margin-left: 20px;
 }
@@ -92,6 +137,40 @@ img {
     margin: 10px 1rem;
 }
 
+.goals-title {
+    margin: 0;
+}
+
+.skill-content p {
+    font-size: 1.375rem;
+}
+
+.list-title {
+    margin: 10px 0;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px 0;
+    padding: 0;
+}
+
+.skill-list li {
+    display: inline;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 3px 3px var(--primary-main-color);
+    padding: 10px 20px;
+    margin: 5px 10px;
+    font-size: 1.125rem;
+}
+
+#social-media-icons img {
+    max-width: 64px;
+}
+
 #bookmarks {
     position: absolute;
     top: 45%;
@@ -113,70 +192,76 @@ img {
     );
     width: 400px;
     text-align: left;
-    font-family: 'Jersey 10', sans-serif;
-    font-size: 1.5rem;
     padding: 15px 0;
-    text-shadow: 3px 3px black;
     cursor: pointer;
 }
 
-.bookmark h3 {
+.bookmark p {
     margin: 0 80px 0 10px;
     letter-spacing: 2px;
+    font-size: 1.75rem;
+    font-family: 'Jersey 10', sans-serif;
+    text-shadow: 3px 3px black;
 }
 
 #web-dev-bookmark {
-    --bookmark-bg-color: #F0353588;
+    --bookmark-bg-color: var(--primary-main-color);
+    opacity: 50%;
     margin-left: 140px;
 }
 
 #web-dev-bookmark:hover {
-    --bookmark-bg-color: #F03535FF;
+    opacity: 100%;
 }
 
 #game-dev-bookmark {
-    --bookmark-bg-color: #2D7DC788;
+    --bookmark-bg-color: var(--secondary-main-color);
+    opacity: 50%;
     margin-left: 110px;
 }
 
 #game-dev-bookmark:hover {
-    --bookmark-bg-color: #2D7DC7FF;
+    opacity: 100%;
 }
 
 #art-bookmark {
-    --bookmark-bg-color: #349F3988;
+    --bookmark-bg-color: var(--tertiary-main-color);
+    opacity: 50%;
     margin-left: 80px;
 }
 
 #art-bookmark:hover {
-    --bookmark-bg-color: #349F39FF;
+    opacity: 100%;
 }
 
 #music-bookmark {
-    --bookmark-bg-color: #D7AF1A88;
+    --bookmark-bg-color: var(--quarternary-main-color);
+    opacity: 50%;
     margin-left: 50px;
 }
 
 #music-bookmark:hover {
-    --bookmark-bg-color: #D7AF1AFF;
+    opacity: 100%;
 }
 
 #contact-bookmark {
-    --bookmark-bg-color: #7D28AB88;
+    --bookmark-bg-color: var(--quinary-main-color);
+    opacity: 50%;
     margin-left: 25px;
 }
 
 #contact-bookmark:hover {
-    --bookmark-bg-color: #7D28ABFF;
+    opacity: 100%;
 }
 
 #landing-bookmark {
-    --bookmark-bg-color: #D16C1388;
+    --bookmark-bg-color: #D16C13FF;
+    opacity: 50%;
     margin-left: 0;
 }
 
 #landing-bookmark:hover {
-    --bookmark-bg-color: #D16C13FF;
+    opacity: 100%;
 }
 
 @keyframes extend {
