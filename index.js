@@ -1,4 +1,4 @@
-// bookmarks holds all elements with bookmark class; flavorImage grabs element with background image on it
+// bookmarks holds all elements with bookmark class; flavorImage grabs element with background image on it; contentPages grab every different page of content that will fade in from bookmarks
 const bookmarks = document.getElementsByClassName("bookmark");
 const flavorImage = document.getElementById("landing-bottom");
 const contentPages = document.getElementsByClassName("content-page");
