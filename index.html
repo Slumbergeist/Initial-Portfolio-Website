@@ -1,10 +1,10 @@
 <!--
 TO DO:
 - Format skill pages better
-- Adjust colors and style of skill tags
-- Add contact form
+- Rewrite descriptions, make more succinct
+- Adjust colors and style of skill tags on each content page
+- Adjust form style
 - Center background images
-- Adjust bookmark icons so they disappear when hovered over and displays text instead
 
 - Adjust accessibility
 - Ensure responsive design
@@ -118,8 +118,19 @@ TO DO:
                                 </div>
                             </div>
                             <p>Or fill out the form below!</p>
-                            <!-- Add Contact information and also a form that will give a summary of what is requested -->
-                            <form></form>
+                            <form id="request-form" method="post">
+                                <label for="skill-select">Type:</label>
+                                <select id="skill-select" name="skill-select">
+                                    <option value="web-dev">Web Development</option>
+                                    <option value="game-dev">Game Development</option>
+                                    <option value="art">Art & 3D Modelling</option>
+                                    <option value="music">Music</option>
+                                    <option value="multiple">Multiple</option>
+                                </select>
+                                <label for="request-box">Brief description:</label>
+                                <textarea id="request-box" name="request-box" rows="5" cols="50">Type here...</textarea>
+                                <input class="form-button" type="submit">
+                            </form>
                         </article>
                     </section>
                 </div>

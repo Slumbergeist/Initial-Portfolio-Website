@@ -53,7 +53,6 @@ const bookmarkToContent = id => {
     mark.addEventListener("mouseover", function() {
         this.style.animation = 'extend 1s ease';
         this.style.animationFillMode = 'forwards';
-        this.style.textAlign = 'right';
 
         // Get currently displayed content page and newly selected content page
         let activePage = getCurrentContentPage();
@@ -77,6 +76,5 @@ const bookmarkToContent = id => {
     // Once mouse leaves bookmark, reset to initial state
     mark.addEventListener("mouseout", function() {
         this.style.animation = 'retract 1s ease';
-        this.style.textAlign = 'left';
     });
 });
