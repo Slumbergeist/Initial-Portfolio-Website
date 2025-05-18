@@ -51,8 +51,8 @@ const bookmarkToContent = id => {
 [].forEach.call(bookmarks, mark => {
     // While hovering over the element, pull bookmark to the right, displays text, and switches out content page on left side of screen. Also switches background image for corresponding bookmark
     mark.addEventListener("mouseover", function() {
-        this.style.animation = 'extend 1s ease';
-        this.style.animationFillMode = 'forwards';
+        this.classList.remove('bookmark-in');
+        this.classList.add('bookmark-out');
 
         // Get currently displayed content page and newly selected content page
         let activePage = getCurrentContentPage();
@@ -75,6 +75,7 @@ const bookmarkToContent = id => {
 
     // Once mouse leaves bookmark, reset to initial state
     mark.addEventListener("mouseout", function() {
-        this.style.animation = 'retract 1s ease';
+        this.classList.remove('bookmark-out');
+        this.classList.add('bookmark-in');
     });
 });
