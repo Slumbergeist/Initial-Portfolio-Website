@@ -47,6 +47,13 @@ const bookmarkToContent = id => {
     return document.getElementById(newId);
 }
 
+window.addEventListener("load", function() {
+    const initialPage = document.getElementById('landing-page');
+    initialPage.style.animationDelay = '1s';
+    initialPage.style.animation = 'pop-in 1s ease forwards';
+    initialPage.style.display = 'flex';
+});
+
 // Check every element with a bookmark class
 [].forEach.call(bookmarks, mark => {
     // While hovering over the element, pull bookmark to the right, displays text, and switches out content page on left side of screen. Also switches background image for corresponding bookmark
@@ -65,8 +72,7 @@ const bookmarkToContent = id => {
 
         // Bring in new selected page content
         upcomingPage.style.animationDelay = '1s';
-        upcomingPage.style.animation = 'pop-in 1s ease';
-        upcomingPage.style.animationFillMode = 'forwards';
+        upcomingPage.style.animation = 'pop-in 1s ease forwards';
         upcomingPage.style.display = 'flex';
 
         // Background image switch
