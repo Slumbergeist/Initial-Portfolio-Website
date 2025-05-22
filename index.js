@@ -57,31 +57,35 @@ window.addEventListener("load", function() {
 // Check every element with a bookmark class
 [].forEach.call(bookmarks, mark => {
     // While hovering over the element, pull bookmark to the right, displays text, and switches out content page on left side of screen. Also switches background image for corresponding bookmark
-    mark.addEventListener("mouseover", function() {
-        this.classList.remove('bookmark-in');
-        this.classList.add('bookmark-out');
+    ['mouseover', 'focus'].forEach(event => {
+        mark.addEventListener(event, function() {
+            this.classList.remove('bookmark-in');
+            this.classList.add('bookmark-out');
 
-        // Get currently displayed content page and newly selected content page
-        let activePage = getCurrentContentPage();
-        const upcomingPage = bookmarkToContent(this.id);
+            // Get currently displayed content page and newly selected content page
+            let activePage = getCurrentContentPage();
+            const upcomingPage = bookmarkToContent(this.id);
 
-        // If an activePage exists and isn't the same as the upcoming page, set display to none;
-        if (activePage && activePage.id !== upcomingPage.id) {
-            activePage.style.display = 'none';
-        }
+            // If an activePage exists and isn't the same as the upcoming page, set display to none;
+            if (activePage && activePage.id !== upcomingPage.id) {
+                activePage.style.display = 'none';
+            }
 
-        // Bring in new selected page content
-        upcomingPage.style.animationDelay = '1s';
-        upcomingPage.style.animation = 'pop-in 1s ease forwards';
-        upcomingPage.style.display = 'flex';
+            // Bring in new selected page content
+            upcomingPage.style.animationDelay = '1s';
+            upcomingPage.style.animation = 'pop-in 1s ease forwards';
+            upcomingPage.style.display = 'flex';
 
-        // Background image switch
-        imageSwitch(this.id);
+            // Background image switch
+            imageSwitch(this.id);
+        })
     });
 
     // Once mouse leaves bookmark, reset to initial state
-    mark.addEventListener("mouseout", function() {
-        this.classList.remove('bookmark-out');
-        this.classList.add('bookmark-in');
-    });
+    ['mouseout', 'focusout'].forEach(event => {
+        mark.addEventListener(event, function() {
+            this.classList.remove('bookmark-out');
+            this.classList.add('bookmark-in');
+        });
+    })
 });

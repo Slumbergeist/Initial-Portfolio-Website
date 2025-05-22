@@ -19,18 +19,18 @@ TODO:
         <title>Caleb Conradi - Developer/Artist</title>
     </head>
     <body>
-        <main>
-            <div id="base">
-                <div id="landing-top">
+        <div id="base">
+            <div id="landing-top">
+                <main>
                     <section id="landing-page" class="content-page">
                         <div class="image-container">
                             <img src="img/Caleb.jpg" alt="Caleb Conradi">
                         </div>
-                        <div class="landing-text">
+                        <article class="landing-text">
                             <h1>Caleb Conradi</h1>
                             <h2>Indev Developer & Artist</h2>
                             <p id="tagline">Just like this website, I am a work in progress</p>
-                        </div>
+                        </article>
                     </section>
 
                     <!-- Below are potential other "pages" that will slide into view when bookmarks are clicked -->
@@ -103,8 +103,8 @@ TODO:
                             <h3 class="list-title">Skills:</h3>
                             <ul class="skill-list">
                                 <li>Aseprite (Pixel Art)</li>
-                                <li>Blockbench (3D Modelling)</li>
-                                <li>Blender (3D Modelling)</li>
+                                <li>Blockbench (3D Modeling)</li>
+                                <li>Blender (3D Modeling)</li>
                             </ul>
                         </article>
                         <hr class="content-divider">
@@ -160,52 +160,52 @@ TODO:
                                 </div>
                             </div>
                             <p>Or fill out the form below!</p>
-                            <hr class="content-divider">
-                            <form id="request-form" method="post">
-                                <label for="skill-select">Inquiry type:</label>
-                                <select id="skill-select" name="skill-select">
-                                    <option value="web-dev">Web Development</option>
-                                    <option value="game-dev">Game Development</option>
-                                    <option value="art">Art & 3D Modeling</option>
-                                    <option value="music">Music</option>
-                                    <option value="multiple">Multiple</option>
-                                </select>
-                                <label for="request-box">Brief inquiry description:</label>
-                                <textarea id="request-box" name="request-box" rows="5" cols="50" placeholder="Type here..." required></textarea>
-                                <input class="form-button" type="submit">
-                            </form>
                         </article>
+                        <hr class="content-divider">
+                        <form id="request-form" method="post">
+                            <label for="skill-select">Inquiry type:</label>
+                            <select id="skill-select" name="skill-select">
+                                <option value="web-dev">Web Development</option>
+                                <option value="game-dev">Game Development</option>
+                                <option value="art">Art & 3D Modeling</option>
+                                <option value="music">Music</option>
+                                <option value="multiple">Multiple</option>
+                            </select>
+                            <label for="request-box">Brief inquiry description:</label>
+                            <textarea id="request-box" name="request-box" rows="5" cols="50" placeholder="Type here..." required></textarea>
+                            <input class="form-button" type="submit" value="Submit">
+                        </form>
                     </section>
-                </div>
-                <nav id="bookmarks">
-                    <div id="web-dev-bookmark" class="bookmark web-dev">
-                        <p>Web Dev</p>
-                        <img src="img/icons/Web%20Dev.png" class="icon" alt="Web dev page icon">
-                    </div>
-                    <div id="game-dev-bookmark" class="bookmark game-dev">
-                        <p>Game Dev</p>
-                        <img src="img/icons/Game%20Dev.png" class="icon" alt="Game dev page icon">
-                    </div>
-                    <div id="art-bookmark" class="bookmark artist">
-                        <p>Digital Art</p>
-                        <img src="img/icons/Art.png" class="icon" alt="Art page icon">
-                    </div>
-                    <div id="music-bookmark" class="bookmark musician">
-                        <p>Music</p>
-                        <img src="img/icons/Music.png" class="icon" alt="Music page icon">
-                    </div>
-                    <div id="contact-bookmark" class="bookmark contact">
-                        <p>Contact</p>
-                        <img src="img/icons/Contact.png" class="icon" alt="Contact page icon">
-                    </div>
-                    <div id="landing-bookmark" class="bookmark">
-                        <p>Home</p>
-                        <img src="img/icons/Home.png" class="icon" alt="Home page icon">
-                    </div>
-                </nav>
-                <div id="landing-bottom"></div>
+                </main>
             </div>
-        </main>
+            <nav id="bookmarks">
+                <div id="web-dev-bookmark" class="bookmark web-dev" tabindex="0" aria-labelledby="web-dev-bookmark-title">
+                    <p id="web-dev-bookmark-title">Web Dev</p>
+                    <img src="img/icons/Web%20Dev.png" class="icon" alt="Web dev page icon">
+                </div>
+                <div id="game-dev-bookmark" class="bookmark game-dev" tabindex="0" aria-labelledby="game-dev-bookmark-title">
+                    <p id="game-dev-bookmark-title">Game Dev</p>
+                    <img src="img/icons/Game%20Dev.png" class="icon" alt="Game dev page icon">
+                </div>
+                <div id="art-bookmark" class="bookmark artist" tabindex="0" aria-labelledby="art-bookmark-title">
+                    <p id="art-bookmark-title">Digital Art</p>
+                    <img src="img/icons/Art.png" class="icon" alt="Art page icon">
+                </div>
+                <div id="music-bookmark" class="bookmark musician" tabindex="0" aria-labelledby="music-bookmark-title">
+                    <p id="music-bookmark-title">Music</p>
+                    <img src="img/icons/Music.png" class="icon" alt="Music page icon">
+                </div>
+                <div id="contact-bookmark" class="bookmark contact" tabindex="0" aria-labelledby="contact-bookmark-title">
+                    <p id="contact-bookmark-title">Contact</p>
+                    <img src="img/icons/Contact.png" class="icon" alt="Contact page icon">
+                </div>
+                <div id="landing-bookmark" class="bookmark" tabindex="0" aria-labelledby="landing-bookmark-title">
+                    <p id="landing-bookmark-title">Home</p>
+                    <img src="img/icons/Home.png" class="icon" alt="Home page icon">
+                </div>
+            </nav>
+            <div id="landing-bottom"></div>
+        </div>
     </body>
     <script src="index.js"></script>
 </html>
