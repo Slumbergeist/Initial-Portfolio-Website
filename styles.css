@@ -101,6 +101,36 @@ img {
     height: 100%;
 }
 
+@media only screen and (max-width: 850px) {
+    #landing-top {
+        clip-path: none;
+        background-image: url("img/columbia.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        box-shadow: inset 0 0 0 1000px #000000CC;
+        width: 100%;
+        justify-content: center;
+        z-index: 0;
+        transition: background-image 0.5s ease-in;
+    }
+
+    #landing-bottom {
+        display: none;
+    }
+
+    #base {
+        height: auto;
+    }
+
+    main {
+        margin: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
 
 /*  Landing/Home page  */
 #landing-page {
@@ -161,6 +191,28 @@ img {
         align-items: center;
         text-align: center;
         min-width: 500px;
+    }
+
+    .landing-text h1 {
+        font-size: 3rem;
+    }
+
+    .landing-text h2 {
+        font-size: 1.875rem;
+    }
+
+    #tagline {
+        font-size: 1.25rem;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    #landing-page {
+        margin: 0;
+    }
+
+    .landing-text {
+        margin: 0;
     }
 }
 
@@ -292,6 +344,7 @@ img {
     .project-list {
         justify-content: center;
         margin-top: 10px;
+        flex-wrap: wrap;
     }
 
     .project {
@@ -300,6 +353,24 @@ img {
 
     .project-title {
         font-size: 0.875rem;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .content-page {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .skill-content p {
+        margin: 0;
+    }
+
+    ul.skill-list {
+        margin: 0;
+        justify-content: center;
     }
 }
 
@@ -476,6 +547,42 @@ img {
     }
 }
 
+@media only screen and (max-width: 850px) {
+    #bookmarks {
+        flex-direction: row;
+        justify-content: stretch;
+        align-items: flex-start;
+        top: 0;
+        height: 80px;
+        width: 100%;
+    }
+
+    .bookmark {
+        background-color: var(--main-color);
+        margin: 0 !important;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+
+    .bookmark p {
+        display: none;
+    }
+
+    .bookmark:hover .icon {
+        display: inherit;
+    }
+
+    .icon {
+        margin: 0 auto;
+    }
+
+    .bookmark-in,
+    .bookmark-out {
+        animation: none;
+    }
+}
+
 
 /*  Animations  */
 @keyframes extend {
@@ -497,5 +604,17 @@ img {
     100% {
         transform: translate(5%);
         opacity: 100%;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    @keyframes pop-in {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            transform: translate(0);
+            opacity: 100%;
+        }
     }
 }
